@@ -1,12 +1,11 @@
 {
-	"name": "@divriots/starter-systemui-fork-kosltrml",
+	"name": "@divriots/starter-react-aria",
 	"version": "0.0.0",
 	"description": "",
 	"license": "ISC",
 	"type": "module",
-	"homepage": "{{ homepage }}",
 	"scripts": {
-		"serve": "dsd-cli serve z99ptYZyvMOGDivUlP9u --open"
+		"serve": "dsd-cli serve TIVJpWNAZ0hSftKJ8gjY --open"
 	},
 	"devDependencies": {
 		"dsd-cli": "latest"

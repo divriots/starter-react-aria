@@ -4,7 +4,14 @@
     "menu": [
       "introduction",
       [
-        "Theme",
+        "components",
+        [
+          "button",
+          "switch"
+        ]
+      ],
+      [
+        "theme",
         [
           "typography",
           "colors",
