@@ -1,0 +1,14 @@
+{
+	"name": "@divriots/starter-systemui-fork-kosltrml",
+	"version": "0.0.0",
+	"description": "",
+	"license": "ISC",
+	"type": "module",
+	"homepage": "{{ homepage }}",
+	"scripts": {
+		"serve": "dsd-cli serve z99ptYZyvMOGDivUlP9u --open"
+	},
+	"devDependencies": {
+		"dsd-cli": "latest"
+	}
+}
