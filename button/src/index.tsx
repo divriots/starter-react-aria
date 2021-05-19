@@ -1,6 +1,7 @@
 import React, { useRef, ElementType, HTMLAttributes } from 'react';
 import { AriaButtonProps } from '@react-types/button';
 import { useButton, ButtonAria } from '@react-aria/button'
+import styles from './button.module.css';
 
 export const Button = (props: AriaButtonProps<ElementType>): ButtonAria<HTMLAttributes<any>> => {
   const ref = useRef();
@@ -8,7 +9,7 @@ export const Button = (props: AriaButtonProps<ElementType>): ButtonAria<HTMLAttr
   const { children } = props;
 
   return (
-    <button {...buttonProps} ref={ref}>
+    <button {...buttonProps} ref={ref} className={styles.button}>
       {children}
     </button>
   );

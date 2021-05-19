@@ -1,5 +1,6 @@
 import React from 'react';
 import { Select, Item } from '../index';
+import '~/theme/src/theme.scss';
 
 
 export const select = () => (

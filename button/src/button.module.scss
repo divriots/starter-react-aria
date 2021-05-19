@@ -1,0 +1,29 @@
+@import '../../theme/src/theme.scss';
+
+.button {
+  display: inline-flex;
+  appearance: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transition: all 250ms ease 0s;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  width: auto;
+  line-height: 1.2;
+  border-width: 0px;
+  border-radius: var(--aria-border-radius-medium);
+  font-weight: var(--aria-font-weight-semibold);
+  height: var(--aria-spacing-xx-large);
+  min-width: var(--aria-spacing-xx-large);
+  font-size: var(--aria-font-size-medium);
+  padding-inline-start: var(--aria-spacing-medium);
+  padding-inline-end: var(--aria-spacing-medium);
+  background: var(--aria-color-primary);
+  color: var(--aria-color-white);
+}

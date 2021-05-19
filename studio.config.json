@@ -7,19 +7,19 @@
         "components",
         [
           "button",
-          "switch"
+          "switch",
+          "select"
         ]
       ],
       [
-        "theme",
+        "tokens",
         [
           "typography",
           "colors",
-          "space",
-          "sizes",
-          "shadows",
-          "radii",
-          "border",
+          "spacing",
+          "elevation",
+          "border-radius",
+          "transition",
           "z-index"
         ]
       ],
