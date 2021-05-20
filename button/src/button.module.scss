@@ -19,11 +19,25 @@
   border-width: 0px;
   border-radius: var(--aria-border-radius-medium);
   font-weight: var(--aria-font-weight-semibold);
-  height: var(--aria-spacing-xx-large);
   min-width: var(--aria-spacing-xx-large);
-  font-size: var(--aria-font-size-medium);
   padding-inline-start: var(--aria-spacing-medium);
   padding-inline-end: var(--aria-spacing-medium);
+  margin: 2px;
   background: var(--aria-color-primary);
   color: var(--aria-color-white);
+}
+
+.small {
+  font-size: var(--aria-font-size-small);
+  height: var(--aria-spacing-x-large);
+}
+
+.medium {
+  font-size: var(--aria-font-size-medium);
+  height: var(--aria-spacing-xx-large);
+}
+
+.large {
+  font-size: var(--aria-font-size-large);
+  height: var(--aria-spacing-xxx-large);
 }

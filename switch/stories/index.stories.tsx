@@ -7,4 +7,8 @@ export default {
   },
 };
 
-export const switch_ = () => <Switch>Test</Switch>;
+export const small_switch = () => <Switch size="small">Test</Switch>;
+
+export const medium_switch = () => <Switch size="medium">Test</Switch>;
+
+export const large_switch = () => <Switch size="large">Test</Switch>;
