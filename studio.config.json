@@ -4,14 +4,6 @@
     "menu": [
       "introduction",
       [
-        "components",
-        [
-          "button",
-          "switch",
-          "select"
-        ]
-      ],
-      [
         "tokens",
         [
           "typography",
@@ -20,13 +12,22 @@
           "elevation",
           "border-radius",
           "transition",
-          "z-index"
+          "z-index",
+          "all"
         ]
       ],
       [
-        "infrastructure",
+        "components",
         [
-          "theme"
+          "button",
+          "switch",
+          "select"
+        ]
+      ],
+      [
+        "layout",
+        [
+          "layout"
         ]
       ]
     ]

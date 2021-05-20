@@ -1,7 +1,11 @@
 import React from 'react';
 import { Select, Item } from '../index';
-import '~/theme/src/theme.scss';
 
+export default {
+  parameters: {
+    layout: "centered",
+  },
+};
 
 export const select = () => (
   <Select label="Favorite Color">

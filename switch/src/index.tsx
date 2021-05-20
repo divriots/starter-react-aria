@@ -18,8 +18,8 @@ export const Switch = (props: AriaSwitchProps): SwitchAria => {
       <VisuallyHidden>
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
-      <span class={styles.switch} {...dataChecked} >
-        <span class={styles.switch_thumb} {...dataChecked} />
+      <span className={styles.switch} {...dataChecked} >
+        <span className={styles.switch_thumb} {...dataChecked} />
       </span>
       {props.children}
     </label>
