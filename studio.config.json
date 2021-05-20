@@ -4,22 +4,30 @@
     "menu": [
       "introduction",
       [
-        "Theme",
+        "tokens",
         [
           "typography",
           "colors",
-          "space",
-          "sizes",
-          "shadows",
-          "radii",
-          "border",
-          "z-index"
+          "spacing",
+          "elevation",
+          "border-radius",
+          "transition",
+          "z-index",
+          "all"
         ]
       ],
       [
-        "infrastructure",
+        "components",
         [
-          "theme"
+          "button",
+          "switch",
+          "select"
+        ]
+      ],
+      [
+        "layout",
+        [
+          "layout"
         ]
       ]
     ]
