@@ -10,7 +10,7 @@
   border-radius: var(--aria-border-radius-pill);
   padding: 2px;
   margin: 0 4px;
-  transition: all 120ms ease 0s;
+  transition: all var(--aria-transition-fast) ease 0s;
   background: var(--aria-color-gray-300);
 }
 
