@@ -1,4 +1,5 @@
 import React from 'react';
-import { transitions, Transitions } from '~/showcasing';
+import '~/all/dist/all.css';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
 
-export const transitions_ = () => <Transitions cssProps={transitions} />;
+export const transitions = () => <StyleShowcases prefix="--aria-transition" />;

@@ -1,9 +1,12 @@
 import React from 'react';
-import { colors, Boxes } from '~/showcasing';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
+import './stories.css';
+import '~/all/dist/all.css';
 
-export const border_radius = () => (
-  <Boxes
-    cssProps={colors}
-    getStyle={(name) => ({ backgroundColor: `var(${name})` })}
+export const color = () => (
+  <StyleShowcases
+    prefix="--aria-color"
+    styleKey="backgroundColor"
+    componentProps={{ className: "box" }}
   />
 );
