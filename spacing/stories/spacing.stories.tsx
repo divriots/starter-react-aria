@@ -1,9 +1,6 @@
 import React from 'react';
-import { spacing, Space } from '~/showcasing';
+import '~/all/dist/all.css';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
 
-export const spacing_ = () => (
-  <Space
-    cssProps={spacing}
-    getStyle={(name) => ({ width: `var(${name})` })}
-  />
-);
+
+export const spacing = () => <StyleShowcases prefix="--aria-spacing" />;

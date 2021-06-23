@@ -1,4 +1,5 @@
 import React from 'react';
-import { ZIndex, zIndices } from '~/showcasing';
+import '~/all/dist/all.css';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
 
-export const z_index = () => <ZIndex cssProps={zIndices} />;
+export const z_index = () => <StyleShowcases prefix="--aria-z-index" />;

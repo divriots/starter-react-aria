@@ -1,38 +1,43 @@
 import React from 'react';
-import { fontFamilies, fontSizes, fontWeights, letterSpacing, lineHeights, Texts } from '~/showcasing';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
+import '~/all/dist/all.css';
 
 export const font_family = () => (
-  <Texts
-    cssProps={fontFamilies}
-    getStyle={(name) => ({ fontFamily: `var(${name})` })}
+  <StyleShowcases
+    prefix="--aria-font-family"
+    showcaseComponent="text"
+    styleKey="fontFamily"
   />
 );
 
 export const font_size = () => (
-  <Texts
-    cssProps={fontSizes}
-    getStyle={(name) => ({ fontSize: `var(${name})` })}
+  <StyleShowcases
+    prefix="--aria-font-size"
+    showcaseComponent="text"
+    styleKey="fontSize"
   />
 );
 
 export const font_weight = () => (
-  <Texts
-    cssProps={fontWeights}
-    getStyle={(name) => ({ fontWeight: `var(${name})` })}
+  <StyleShowcases
+    prefix="--aria-font-weight"
+    showcaseComponent="text"
+    styleKey="fontWeight"
   />
 );
 
 export const letter_spacing = () => (
-  <Texts
-    cssProps={letterSpacing}
-    getStyle={(name) => ({ letterSpacing: `var(${name})` })}
+  <StyleShowcases
+    prefix="--aria-letter-spacing"
+    showcaseComponent="text"
+    styleKey="letterSpacing"
   />
 );
 
 export const line_height = () => (
-  <Texts
-    cssProps={lineHeights}
-    getStyle={(name) => ({ lineHeight: `var(${name})` })}
-    longText
+  <StyleShowcases
+    prefix="--aria-line-height"
+    showcaseComponent="text"
+    styleKey="lineHeight"
   />
 );

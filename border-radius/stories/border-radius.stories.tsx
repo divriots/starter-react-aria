@@ -1,9 +1,12 @@
 import React from 'react';
-import { radii, Boxes } from '~/showcasing';
+import { StyleShowcases } from '@divriots/dockit-react/style-showcases';
+import './stories.css';
+import '~/all/dist/all.css';
 
-export const border_radius = () => (
-  <Boxes
-    cssProps={radii}
-    getStyle={(name) => ({ borderRadius: `var(${name})` })}
+export const color = () => (
+  <StyleShowcases
+    prefix="--aria-border-radius"
+    styleKey="borderRadius"
+    componentProps={{ className: "box" }}
   />
 );
