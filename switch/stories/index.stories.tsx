@@ -1,9 +1,10 @@
 import React from 'react';
 import { Switch } from '../index';
+import '~/story-layout';
 
 export default {
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 };
 

@@ -25,9 +25,10 @@
         ]
       ],
       [
-        "infrastructure",
+        "dockit",
         [
-          "layout"
+          "mdx-layout",
+          "story-layout"
         ]
       ]
     ]
