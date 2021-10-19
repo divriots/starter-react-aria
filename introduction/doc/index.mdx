@@ -1,5 +1,97 @@
 import { mdx } from '@mdx-js/react';
-import { CssLayout } from '@divriots/dockit-react/mdx-layout-css';
-export default CssLayout;
+import { Layout } from '~/mdx-layout';
+export default Layout;
 
-# Intro
+# React Aria Tech Sample <br/><small>_by_ ‹div›RIOTS</small>
+
+This is a _Technology Sample_ you can rely on to build your own Design System, based on React and [React Aria](https://react-spectrum.adobe.com/react-aria/).
+
+**Disclaimer**: _Technology Samples_ aren't comprehensive _Design Systems_ but showcases a given technology so you free to build you own solution upon it.
+
+## Architecture
+
+This _tech sample_ uses [React](https://reactjs.org/) and [JSX](https://reactjs.org/docs/introducing-jsx.html) to implement its components with [TypeScript](https://www.typescriptlang.org/). It relies on [React Aria](https://react-spectrum.adobe.com/react-aria/), which is a part of the _Adobe Spectrum Design System_. React Aria provides a collection of _React Hooks_ to handle the accessibility and navigation behaviors, allowing you to set a proper interaction layer for all of your components.
+
+> React Aria ensures consistent behavior, no matter the UI.
+
+> React Aria provides accessibility and behavior according to WAI-ARIA Authoring Practices, including full screen reader and keyboard navigation support.
+
+Because of the agnostic nature of React Aria, the Design Tokens for styling are declared in [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*).
+
+The components then use [Scss](https://sass-lang.com/) for their internal styles, relying on CSS Custom Properties for Tokens access.
+
+### Tokens
+
+The Tokens are split in different components:
+
+- `typography`: fonts definitions
+- `colors`: colors and variants
+- `spacing`: relative and absolute spaces
+- `elevation`: shadows effects
+- `border-radius`
+- `transitions`: easing and speed
+- `z-index`: z-axe indices
+
+All tokens are declared in dedicated `_*.scss` files in their dedicated tokens' components. They declare CSS Custom Properties, prefixed with `--aria-*`. They're then all exposed by the `all/all.scss` component global stylesheet.
+
+Your theme tokens are accessible by importing the theme stylesheet:
+
+```ts
+import '~/all/src/all.scss';
+```
+
+## Components
+
+Components can access the Tokens anywhere in their stylesheets as they're exposed at top CSS level `:root`.
+
+When styled with SCSS, components can use the [Sass `var` method](https://sass-lang.com/documentation/breaking-changes/css-vars) to read the Tokens values.
+
+```scss
+.button {
+  border-radius: var(--aria-border-radius-medium);
+  background: var(--aria-color-primary);
+  color: var(--aria-color-white);
+}
+```
+
+Then the styles are imported in the component using a CSS in React module interpolation:
+
+```ts
+import styles from './button.module.scss';
+
+export const Button => (
+  <button className={`${styles.button}`}>
+    // ...
+  </button>
+)
+```
+
+## Stories
+
+Stories are written in Storybook's [Component Story Format](https://backlight.dev/docs/component-story-format).
+
+The theme stylesheet containing the Tokens is injected in all stories files, thanks to the `story-layout` component:
+
+```jsx
+import '~/story-layout';
+import React from 'react';
+import { Button } from '../index';
+
+export const primary = () => <Button>Primary</Button>;
+```
+
+Stories for the components are located in their `stories/` folder.
+
+## Documentation
+
+Documentation pages are decorated by a React layout using the [@divriots/dockit-react](https://github.com/divriots/dockit-react) helpers. See the `mdx-layout` component.
+
+### Pages
+
+Each component embed its own documentation in its `doc/` folder. You can use any web format for your documentation but we recommend you to write it with the [mdx](https://backlight.dev/docs/mdx) format, allowing you to embed your components live in the documentation.
+
+---
+
+## Links
+
+- [React Aria](https://react-spectrum.adobe.com/react-aria/)
