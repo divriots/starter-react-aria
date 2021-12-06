@@ -3,7 +3,8 @@ import { VisuallyHidden } from '@react-aria/visually-hidden';
 import { useToggleState } from '@react-stately/toggle';
 import { useFocusRing } from '@react-aria/focus';
 import { useSwitch } from '@react-aria/switch';
-import { AriaSwitchProps, SwitchAria } from '@react-aria/switch';
+import type { AriaSwitchProps } from '@react-types/switch';
+import { SwitchAria } from '@react-aria/switch';
 import styles from './switch.module.scss';
 
 export type SwitchProps = AriaSwitchProps & {
