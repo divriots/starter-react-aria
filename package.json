@@ -8,7 +8,7 @@
     "serve": "npx backlight@latest serve TIVJpWNAZ0hSftKJ8gjY --open"
   },
   "devDependencies": {
-    "@divriots/dockit-react": "^0.0.84",
+    "@divriots/dockit-react": "^0.0.85",
     "@mdx-js/react": "^1.6.22"
   },
   "dependencies": {

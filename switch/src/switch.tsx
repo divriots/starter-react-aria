@@ -17,10 +17,7 @@ export type SwitchProps = AriaSwitchProps & {
 /**
   The Switch component is used as an alternative for the checkbox component. You can switch between enabled or disabled states.
 */
-export const Switch = ({
-  size = 'medium',
-  ...rest
-}: SwitchProps): SwitchAria => {
+export const Switch = ({ size = 'medium', ...rest }: SwitchProps) => {
   const state = useToggleState(rest);
   const ref = React.useRef();
   const { inputProps } = useSwitch(rest, state, ref);

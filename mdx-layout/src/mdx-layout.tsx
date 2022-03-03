@@ -1,13 +1,13 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { CoreLayout } from '@divriots/dockit-react/mdx-layout-core';
-import styles from './corelayout.module.scss';
+import { CssLayout } from '@divriots/dockit-react/mdx-layout-css';
+import styles from './layout.module.css';
 
 import '~/all/src/all.scss';
 
 export const Layout = (props) => (
   <MDXProvider>
-    <CoreLayout
+    <CssLayout
       logo={
         <>
           <img
@@ -20,10 +20,6 @@ export const Layout = (props) => (
         </>
       }
       {...props}
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"
     />
   </MDXProvider>
 );
