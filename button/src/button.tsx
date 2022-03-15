@@ -3,14 +3,21 @@ const { useRef } = React;
 import type { ElementType, HTMLAttributes } from 'react';
 import type { AriaButtonProps } from '@react-types/button';
 import { useButton } from '@react-aria/button';
-import type { ButtonAria } from '@react-aria/button';
 import styles from './button.module.scss';
 
 export type ButtonProps = AriaButtonProps<ElementType> & {
   /**
   Use the size prop to change the size of the button. You can set the value to 'small', 'medium' or 'large'.
    */
-  size: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
+  /**
+  Boolean flag indicating if should render as 'primary' variation.
+   */
+  primary?: boolean;
+  /**
+  Boolean flag indicating if should render as 'secondary' variation.
+   */
+  secondary?: boolean;
 };
 
 /**
@@ -18,8 +25,10 @@ export type ButtonProps = AriaButtonProps<ElementType> & {
 */
 export const Button = ({
   size = 'medium',
+  primary = true,
+  secondary = false,
   ...rest
-}: ButtonProps): ButtonAria<HTMLAttributes<any>> => {
+}: ButtonProps) => {
   const ref = useRef();
   const { buttonProps } = useButton(rest, ref);
   const { children } = rest;
@@ -28,7 +37,11 @@ export const Button = ({
     <button
       {...buttonProps}
       ref={ref}
-      className={`${styles.button} ${styles[size]}`}
+      className={`
+      ${styles.button} ${styles[size]}
+      ${secondary ? styles.secondary : ''}
+      ${rest.isDisabled ? styles.disabled : ''}
+      `}
     >
       {children}
     </button>

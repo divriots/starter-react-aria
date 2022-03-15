@@ -1,15 +1,25 @@
 import React from 'react';
 import { Switch } from '../index';
-import '~/story-layout';
+import classes from './stories.module.css';
 
-export default {
-  parameters: {
-    layout: 'centered',
-  },
-};
+export const switch_ = () => (
+  <div className={classes.container}>
+    <Switch size="small">Small</Switch>
+    <Switch size="medium">Medium</Switch>
+    <Switch size="large">Large</Switch>
+  </div>
+);
 
-export const small_switch = () => <Switch size="small">Test</Switch>;
-
-export const medium_switch = () => <Switch size="medium">Test</Switch>;
-
-export const large_switch = () => <Switch size="large">Test</Switch>;
+export const switch_disabled = () => (
+  <div className={classes.container}>
+    <Switch isDisabled size="small">
+      Small
+    </Switch>
+    <Switch isDisabled size="medium">
+      Medium
+    </Switch>
+    <Switch isDisabled size="large">
+      Large
+    </Switch>
+  </div>
+);
