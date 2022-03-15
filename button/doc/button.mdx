@@ -22,11 +22,21 @@ import { Button } from '@divriots/starter-react-aria/button';
 <Playground
   scope={{ Button }}
   code={`
-<Button size="small" onPress={() => alert('small button pressed!')}>Test</Button>
-<Button size="medium" onPress={() => alert('medium button pressed!')}>Test</Button>
-<Button size="large" onPress={() => alert('large button pressed!')}>Test</Button>
-  `}
-/>
+<Button size="small" onPress={() => alert('small button pressed!')}>Small</Button>
+<Button size="medium" onPress={() => alert('medium button pressed!')}>Medium</Button>
+<Button size="large" onPress={() => alert('large button pressed!')}>Large</Button>
+<br />
+
+<Button primary onPress={() => alert('small button pressed!')}>
+  Primary
+</Button>
+<Button secondary onPress={() => alert('medium button pressed!')}>
+  Secondary
+</Button>
+<Button isDisabled onPress={() => alert('large button pressed!')}>
+  Disabled
+</Button>
+`} />
 
 ## Props
 

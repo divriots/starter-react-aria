@@ -21,8 +21,36 @@
   padding-inline-start: var(--aria-spacing-medium);
   padding-inline-end: var(--aria-spacing-medium);
   margin: 2px;
-  background: var(--aria-color-primary);
-  color: var(--aria-color-white);
+  background-color: var(--aria-color-primary);
+  color: var(--aria-color-secondary);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--aria-color-primary);
+  opacity: 0.9;
+}
+
+.secondary {
+  background-color: var(--aria-color-secondary);
+  color: var(--aria-color-primary);
+}
+
+.secondary:hover {
+  background-color: var(--aria-color-gray-300);
+}
+
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.disabled:hover {
+  opacity: 0.8;
+}
+
+.disabled:hover {
+  background-color: var(--aria-color-primary);
 }
 
 .small {

@@ -9,13 +9,26 @@ export type ButtonProps = AriaButtonProps<ElementType> & {
   /**
   Use the size prop to change the size of the button. You can set the value to 'small', 'medium' or 'large'.
    */
-  size: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
+  /**
+  Boolean flag indicating if should render as 'primary' variation.
+   */
+  primary?: boolean;
+  /**
+  Boolean flag indicating if should render as 'secondary' variation.
+   */
+  secondary?: boolean;
 };
 
 /**
   The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
 */
-export const Button = ({ size = 'medium', ...rest }: ButtonProps) => {
+export const Button = ({
+  size = 'medium',
+  primary = true,
+  secondary = false,
+  ...rest
+}: ButtonProps) => {
   const ref = useRef();
   const { buttonProps } = useButton(rest, ref);
   const { children } = rest;
@@ -24,7 +37,11 @@ export const Button = ({ size = 'medium', ...rest }: ButtonProps) => {
     <button
       {...buttonProps}
       ref={ref}
-      className={`${styles.button} ${styles[size]}`}
+      className={`
+      ${styles.button} ${styles[size]}
+      ${secondary ? styles.secondary : ''}
+      ${rest.isDisabled ? styles.disabled : ''}
+      `}
     >
       {children}
     </button>

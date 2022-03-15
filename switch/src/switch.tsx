@@ -4,7 +4,6 @@ import { useToggleState } from '@react-stately/toggle';
 import { useFocusRing } from '@react-aria/focus';
 import { useSwitch } from '@react-aria/switch';
 import type { AriaSwitchProps } from '@react-types/switch';
-import { SwitchAria } from '@react-aria/switch';
 import styles from './switch.module.scss';
 
 export type SwitchProps = AriaSwitchProps & {
@@ -30,7 +29,12 @@ export const Switch = ({ size = 'medium', ...rest }: SwitchProps) => {
       <VisuallyHidden>
         <input {...inputProps} {...focusProps} ref={ref} />
       </VisuallyHidden>
-      <span className={`${styles.switch} ${styles[size]}`} {...dataChecked}>
+      <span
+        className={`${styles.switch} ${styles[size]} ${
+          rest.isDisabled ? styles.disabled : ''
+        }`}
+        {...dataChecked}
+      >
         <span
           className={`${styles.switch_thumb} ${styles[`thumb_${size}`]}`}
           {...dataChecked}
