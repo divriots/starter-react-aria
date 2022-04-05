@@ -1,6 +1,6 @@
 {
-  "name": "@backlight-dev/divriots.starter-react-aria",
-  "version": "1.0.0",
+  "name": "@divriots/starter-react-aria",
+  "version": "1.0.1",
   "description": "",
   "license": "MIT",
   "type": "module",
