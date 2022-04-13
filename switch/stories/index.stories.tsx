@@ -6,7 +6,7 @@ export const switch_ = () => (
   <div className={classes.container}>
     <Switch size="small">Small</Switch>
     <Switch size="medium">Medium</Switch>
-    <Switch size="large">Large</Switch>
+    <Switch size="large">Large foo</Switch>
   </div>
 );
 
