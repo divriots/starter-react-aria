@@ -9,7 +9,8 @@
   },
   "devDependencies": {
     "@divriots/dockit-react": "^0.0.85",
-    "@mdx-js/react": "^1.6.22"
+    "@mdx-js/react": "^1.6.22",
+    "chai": "*"
   },
   "dependencies": {
     "@react-aria/button": "^3.3.4",
