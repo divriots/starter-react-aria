@@ -10,6 +10,13 @@ export const switch_ = () => (
   </div>
 );
 
+export const switch_w = () => (
+  <div className={classes.container}>
+    <Switch size="medium">Medium</Switch>
+    <Switch size="large">Large</Switch>
+  </div>
+);
+
 export const switch_disabled = () => (
   <div className={classes.container}>
     <Switch isDisabled size="small">
