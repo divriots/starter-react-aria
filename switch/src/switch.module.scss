@@ -9,7 +9,7 @@
   padding: 2px;
   margin: 0 4px;
   transition: all var(--aria-transition-fast) ease 0s;
-  background: var(--aria-color-gray-300);
+  background: tomato;
 }
 
 .small {
@@ -38,7 +38,7 @@
 
 .switch_thumb {
   background: var(--aria-color-white);
-  transition: all 250ms ease 0s;
+  transition: all 100ms ease 0s;
   align-self: flex-start;
   border-radius: inherit;
 }
